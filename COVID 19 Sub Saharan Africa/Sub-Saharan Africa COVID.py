@@ -3,7 +3,7 @@
 3 main goals:
 1. Create a interactive visual dashboard for COVID information  as of yesterday (new cases, new deaths, total cases, total deaths)
 2. Show trends of COVID-19 since earliest case in Africa
-3. Create an interactive animation to show development of toal cases and deaths across Sub Saharan Africa
+3. Create an interactive animation to show development of total cases and deaths across Sub Saharan Africa
 """
 import pandas as pd 
 import numpy as np 
@@ -40,8 +40,9 @@ final_data[["new_cases", "new_deaths", "total_cases", "total_deaths"]] = final_d
 final_data = final_data.rename(columns={'date': 'Date', 'new_cases': 'New Cases','new_deaths': 'New Deaths','total_cases': 'Total Cases','total_deaths': 'Total Deaths', 'Country_Code': 'Country Code'})
 final_data.dtypes
 
-#========================================================================================================
+#=====================================================================================================
 #Goal 1: Visual Dashboard of COVID-19 as of Yesterday
+#----------------------------------------------------------------------------------------------------
 #get yesterdays date 
 yesterday = (datetime.now() - timedelta(1)).strftime('%Y-%m-%d')
 #dataframe with yesterdays information for sub saharan africa
@@ -75,8 +76,8 @@ fig_total_deaths = px.scatter_geo(
     scope = "africa", projection="equirectangular", title=f'Sub Saharan Africa COVID-19 Total Deaths as of {yesterday}')
 fig_total_deaths.show()
 
-#========================================================================================================
-#Goal 2: COVID-19 Time trend analysis
+#====================================================================================================
+#Goal 2: COVID-19 Time Trend Analysis
 #----------------------------------------------------------------------------------------------------
 """New Cases"""
 #New Cases per Day Sub-Saharan Africa
@@ -92,7 +93,6 @@ fig_daily_new_deaths = px.line(
     daily_new_deaths, 
     x = "Date", y = "New Deaths", title="Sub Saharan Africa COVID-19 Daily New Deaths")
 fig_daily_new_deaths.show()
-
 #----------------------------------------------------------------------------------------------------
 """Total Cases"""
 time_trend_total_cases = px.line(
@@ -100,7 +100,6 @@ time_trend_total_cases = px.line(
     x="Date", y="Total Cases", 
     color='Country', hover_name='Country', title="Total Cases - Daily Trend")
 time_trend_total_cases.show()
-
 #----------------------------------------------------------------------------------------------------
 """Total Deaths"""
 time_trend_total_deaths = px.line(
@@ -109,8 +108,9 @@ time_trend_total_deaths = px.line(
     color='Country', hover_name='Country', title="Total COVID-19 Deaths - Daily Trend")
 time_trend_total_deaths.show()
 
-#========================================================================================================
-#Animation of Total Cases and Total Deaths
+#====================================================================================================
+#Goal 3: Animation showing growth of COVID-19 total cases and deaths in Sub Saharan Africa over time
+#----------------------------------------------------------------------------------------------------
 #create new dataset and reformat date information
 animation_data =  final_data
 to_datetime_fmt = partial(pd.to_datetime, format='%Y-%m-%d')
@@ -122,7 +122,6 @@ animation_data = animation_data.dropna()
 animation_data["Continent"] = "Africa"
 #check for missing values to avoid complications
 animation_data.isnull().sum(); animation_data.head()  #expect different starting times for COVID, some coutries had cases earlier
-
 #----------------------------------------------------------------------------------------------------
 """Total Cases"""
 fig_animation_total_cases = px.scatter_geo(
@@ -131,7 +130,6 @@ fig_animation_total_cases = px.scatter_geo(
     scope = "africa", projection="equirectangular", title=f'Sub Saharan Africa COVID-19 Total Cases over time',
     animation_frame="Date")
 fig_animation_total_cases.show()
-
 #----------------------------------------------------------------------------------------------------
 """Total Deaths"""
 fig_animation_total_deaths = px.scatter_geo(
