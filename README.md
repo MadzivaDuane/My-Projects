@@ -2,7 +2,7 @@
 
 1. Clinical Trials Tracker - a Dash App tracking tool for ClinicalTrials.gov that allows users to search for specific diseases, drugs or other healthcare terms related to clinical trials, and gain insight into trial statuses, phases, enrollment, location and interventions currently under investigation.
 
-2. Robinhood Stock Tracker - a Dash App tracking tool that keeps me informed on the perfomance of different stocks I have bought on Robinhood. Additionally, the tool provides insights and advice on whether to sell or buy stocks I currently have, based on their daily perfomance. 
+2. Robinhood Stock Tracker - a Dash App tracking tool that keeps me informed on the performance of different stocks I have bought on Robinhood. Additionally, the tool provides insights and advice on whether to sell or buy stocks I currently have, based on their daily perfomance. 
 
 3. Fake News Classifier - a text analysis tool that allows users to classify whether news is fake or real using a sklearn's PassiveAggressiveClassifier.
 
