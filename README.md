@@ -13,3 +13,5 @@
 6. COVID-19 Sub-Saharan Africa - data visualization tool used to track COVID-19 new and cumulative cases, and new and cumulative deaths in Sub-Saharan Africa
 
 7. Computer Monitor Web Scraper - web scraping tool used to aggregate prices and other information for different monitors on NewEgg. The tool can be adjusted to source prices for other various products on NewEgg.
+
+8. Yahoo Finance Stock Watchlist - a Dash App visualization tool that aggregates information on a stock's historical performance and provides layered technical indicators useful in making a buying or selling decision, typically on a weekly or bi-monthly basis. Also allows users to compare 2 stocks in regards to their historical performances and technical indicators. 
