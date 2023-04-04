@@ -21,7 +21,7 @@ covid_data = pd.read_csv('https://query.data.world/s/3gmtix24pttvfrd5ocdeddmxrih
 covid_data.head()
 
 #Sub Sahran Africa Country Codes
-path = "/Users/duanemadziva/Documents/_ Print (Hello World)/Learning Python/PythonVS/Data Science Projects/COVID 19 - Sub Saharan Africa/data/"
+path = "/Users/.../data/"
 country_codes = pd.read_csv(path+"country_codes.csv"); country_codes.head()
 
 #data for Sub Saharan Africa, and preprocessing 
