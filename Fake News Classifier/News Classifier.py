@@ -11,7 +11,7 @@ from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.linear_model import PassiveAggressiveClassifier
 from sklearn.metrics import accuracy_score, confusion_matrix
 
-path = "/Users/duanemadziva/Documents/_ Print (Hello World)/Learning Python/PythonVS/Data/"
+path = "/Users/.../Data/"
 news_data = pd.read_csv(path+"news.csv"); news_data.head()
 #check missing data 
 news_data.isnull().sum()
