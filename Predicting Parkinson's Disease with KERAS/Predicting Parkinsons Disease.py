@@ -32,7 +32,7 @@ from sklearn import svm
 #----------------------------------------------------------------------------------------------
 #read in data and preprocessing
 #----------------------------------------------------------------------------------------------
-path = "/Users/duanemadziva/Documents/_ Print (Hello World)/Learning Python/PythonVS/Data/"  #directory
+path = "/Users/.../Data/"  #directory
 parkinsons_data = pd.read_csv(path+"parkinsons.data")
 
 #assumption: there are too many features to do perform exploratory data analysis hence we assume all features are crucial in assessing parkinsons disease
