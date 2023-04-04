@@ -22,7 +22,7 @@ end_font = pygame.font.SysFont("comicsans", 70)
 draw_lines = False
 
 #load images
-path = "/Users/duanemadziva/Documents/_ Print (Hello World)/Learning Python/PythonVS/Data Science Projects/copter_images/"
+path = "/Users/.../copter_images/"
 copter_image = pygame.transform.scale2x(pygame.image.load(os.path.join(path, "copter_final.png")))
 base_image = pygame.transform.scale2x(pygame.image.load(os.path.join(path, "base.png")))
 obstacle_image = pygame.transform.scale2x(pygame.image.load(os.path.join(path, "obstacle.png")))
